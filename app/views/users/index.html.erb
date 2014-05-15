@@ -1,0 +1,23 @@
+<h1>用户列表</h1>
+
+<table border="1" >
+  <tr>
+    <th>用户名</th>
+    <th>Email</th>
+    <th>操作</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr align="center">
+    <td style="width:20%"><%= user.name %></td>
+    <td style="width:50%"><%= user.email %></td>
+    <td style="width:30%"><%= link_to '浏览', user %>
+        <%= link_to '编辑', edit_user_path(user) %>
+        <%= link_to '删除', user, method: :delete, data: { confirm: '确定要删除吗?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '添加', new_user_path %>

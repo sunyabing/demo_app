@@ -14,11 +14,12 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
-  database: demo_app_development
+  encoding: utf8
+  database: demo_app
   pool: 5
-  username: demo_app
-  password:
+  host: localhost
+  username: postgres	
+  password: postgres
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
